@@ -1,31 +1,18 @@
-# curriculum-databases-projects-template
+# VET CLINIC DATABASE
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
-
+Vet Clinic is Module 4 project at Microverse. Vet Clinic is Relational database used to create the initial data structure. Created a table to store animals' information, insert some data into it, and query it.
 
 ## Getting Started
 
-This repository includes files with plain SQL that can be used to recreate a database:
+- Used [schema.sql](./schema.sql) to create all tables.
+- Used [data.sql](./data.sql) to populate tables with sample data.
+- Checked [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+👤 **SYEDA JUVERIA AFREEN**
 
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/sja-thedude)
+- Twitter: [@twitterhandle](https://twitter.com/sja_thedude)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/sja)
 
 ## 🤝 Contributing
 
@@ -39,7 +26,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
+- This is Module 4 Block 1 project at Microverse.
 - Inspiration
 - etc
 
