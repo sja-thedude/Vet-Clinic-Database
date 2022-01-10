@@ -1,6 +1,6 @@
 # VET CLINIC DATABASE
 
-Vet Clinic is Module 4 project at Microverse. Vet Clinic is Relational database used to create the initial data structure. Created a table to store animals' information, insert some data into it, and query it.
+Vet Clinic is Module 4 project at Microverse. Vet Clinic is Relational database used to create the initial data structure. Created and Updated a table to store animals' information, insert some data into it, and query it.
 
 ## Getting Started
 
