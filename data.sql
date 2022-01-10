@@ -1,5 +1,7 @@
 /* Populate database with sample data. */
 
+--ANIMALS TABLE DATA
+
 --Animal: His name is Agumon. He was born on Feb 3rd, 2020, and currently weighs 10.23kg. He was neutered and he has never tried to escape.
 INSERT INTO animals (
     name,
@@ -149,3 +151,107 @@ INSERT INTO animals (
         true,
         17
         );
+
+--OWNERS TABLE DATA
+
+--Sam Smith 34 years old.
+INSERT INTO owners (
+    full_name,
+    age
+    ) VALUES (
+        'Sam Smith',
+        34
+        );
+
+--Jennifer Orwell 19 years old.
+INSERT INTO owners (
+    full_name,
+    age
+    ) VALUES (
+        'Jennifer Orwell',
+        19
+        );
+
+--Bob 45 years old.
+INSERT INTO owners (
+    full_name,
+    age
+    ) VALUES (
+        'Bob',
+        45
+        );
+
+--Melody Pond 77 years old.
+INSERT INTO owners (
+    full_name,
+    age
+    ) VALUES (
+        'Melody Pond',
+        77
+        );
+
+--Dean Winchester 14 years old.
+INSERT INTO owners (
+    full_name,
+    age
+    ) VALUES (
+        'Dean Winchester',
+        14
+        );
+
+--Jodie Whittaker 38 years old.
+INSERT INTO owners (
+    full_name,
+    age
+    ) VALUES (
+        'Jodie Whittaker',
+        38
+        );
+
+--SPECIES TABLE DATA
+
+--Pokemon
+INSERT INTO species (
+    name
+    ) VALUES (
+        'Pokemon'
+        );
+        
+--Digimon
+INSERT INTO species (
+    name
+    ) VALUES (
+        'Digimon'
+        );
+
+--Modify inserted animals so it includes the species_id value:
+
+--All other animals are Pokemon
+UPDATE animals SET species_id = 1;
+--If the name ends in "mon" it will be Digimon
+UPDATE animals SET species_id = 2 WHERE id=1;
+UPDATE animals SET species_id = 2 WHERE id=2;
+UPDATE animals SET species_id = 2 WHERE id=3;
+UPDATE animals SET species_id = 2 WHERE id=4;
+UPDATE animals SET species_id = 2 WHERE id=7;
+
+--Modify your inserted animals to include owner information (owner_id):
+--Sam Smith owns Agumon.
+UPDATE animals SET owners_id = 1 WHERE name='Agumon';
+
+--Jennifer Orwell owns Gabumon and Pikachu.
+UPDATE animals SET owners_id = 2 WHERE name='Gabumon';
+UPDATE animals SET owners_id = 2 WHERE name='Pikachu';
+
+--Bob owns Devimon and Plantmon.
+UPDATE animals SET owners_id = 3 WHERE name='Devimon';
+UPDATE animals SET owners_id = 3 WHERE name='Plantmon';
+
+--Melody Pond owns Charmander, Squirtle, and Blossom.
+UPDATE animals SET owners_id = 4 WHERE name='Charmander';
+UPDATE animals SET owners_id = 4 WHERE name='Squirtle';
+UPDATE animals SET owners_id = 4 WHERE name='Blossom';
+
+--Dean Winchester owns Angemon and Boarmon. 
+UPDATE animals SET owners_id = 5 WHERE name='Angemon';       
+UPDATE animals SET owners_id = 5 WHERE name='Boarmon';
