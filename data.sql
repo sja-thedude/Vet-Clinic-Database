@@ -255,3 +255,84 @@ UPDATE animals SET owners_id = 4 WHERE name='Blossom';
 --Dean Winchester owns Angemon and Boarmon. 
 UPDATE animals SET owners_id = 5 WHERE name='Angemon';       
 UPDATE animals SET owners_id = 5 WHERE name='Boarmon';
+
+--VETS TABLE DATA
+
+--Vet William Tatcher is 45 years old and graduated Apr 23rd, 2000.
+--Vet Maisy Smith is 26 years old and graduated Jan 17th, 2019.
+--Vet Stephanie Mendez is 64 years old and graduated May 4th, 1981.
+--Vet Jack Harkness is 38 years old and graduated Jun 8th, 2008.
+
+INSERT INTO vets (
+    name,
+    age,
+    date_of_graduation
+    ) VALUES
+    ('Vet William Tatcher', 45, '2000-4-23'),
+    ('Vet Maisy Smith', 26, '2019-1-17'),
+    ('Vet Stephanie Mendez', 64, '1981-5-4'),
+    ('Vet Jack Harkness', 38, '2008-6-8');
+
+--SPECIALIZATION TABLE DATA
+
+--Vet William Tatcher is specialized in Pokemon.
+--Vet Stephanie Mendez is specialized in Digimon and Pokemon.
+--Vet Jack Harkness is specialized in Digimon.
+
+INSERT INTO specializations (
+    species_id,
+    vets_id
+    ) VALUES
+    (1, 1),
+    (1, 3),
+    (2, 3),
+    (2, 4);
+
+--VISITS TABLE DATA
+
+--Agumon visited William Tatcher on May 24th, 2020.
+--Agumon visited Stephanie Mendez on Jul 22th, 2020.
+--Gabumon visited Jack Harkness on Feb 2nd, 2021.
+--Pikachu visited Maisy Smith on Jan 5th, 2020.
+--Pikachu visited Maisy Smith on Mar 8th, 2020.
+--Pikachu visited Maisy Smith on May 14th, 2020.
+--Devimon visited Stephanie Mendez on May 4th, 2021.
+--Charmander visited Jack Harkness on Feb 24th, 2021.
+--Plantmon visited Maisy Smith on Dec 21st, 2019.
+--Plantmon visited William Tatcher on Aug 10th, 2020.
+--Plantmon visited Maisy Smith on Apr 7th, 2021.
+--Squirtle visited Stephanie Mendez on Sep 29th, 2019.
+--Angemon visited Jack Harkness on Oct 3rd, 2020.
+--Angemon visited Jack Harkness on Nov 4th, 2020.
+--Boarmon visited Maisy Smith on Jan 24th, 2019.
+--Boarmon visited Maisy Smith on May 15th, 2019.
+--Boarmon visited Maisy Smith on Feb 27th, 2020.
+--Boarmon visited Maisy Smith on Aug 3rd, 2020.
+--Blossom visited Stephanie Mendez on May 24th, 2020.
+--Blossom visited William Tatcher on Jan 11th, 2021.
+
+INSERT INTO visits (
+    animals_id,
+    vets_id,
+    date_of_visit
+    ) VALUES
+    ((SELECT id FROM animals WHERE name = 'Agumon'), (SELECT id FROM vets WHERE name = 'Vet William Tatcher'), '2020-5-24'),
+    ((SELECT id FROM animals WHERE name = 'Agumon'), (SELECT id FROM vets WHERE name = 'Vet Stephanie Mendez'), '2020-7-22'),
+    ((SELECT id FROM animals WHERE name = 'Gabumon'), (SELECT id FROM vets WHERE name = 'Vet Jack Harkness'), '2021-2-2'),
+    ((SELECT id FROM animals WHERE name = 'Pikachu'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2020-1-5'),
+    ((SELECT id FROM animals WHERE name = 'Pikachu'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2020-3-8'),
+    ((SELECT id FROM animals WHERE name = 'Pikachu'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2020-5-14'),
+    ((SELECT id FROM animals WHERE name = 'Devimon'), (SELECT id FROM vets WHERE name = 'Vet Stephanie Mendez'), '2021-5-4'),
+    ((SELECT id FROM animals WHERE name = 'Charmander'), (SELECT id FROM vets WHERE name = 'Vet Jack Harkness'), '2021-2-24'),
+    ((SELECT id FROM animals WHERE name = 'Plantmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2019-12-21'),
+    ((SELECT id FROM animals WHERE name = 'Plantmon'), (SELECT id FROM vets WHERE name = 'Vet William Tatcher'), '2020-8-10'),
+    ((SELECT id FROM animals WHERE name = 'Plantmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2021-4-7'),
+    ((SELECT id FROM animals WHERE name = 'Squirtle'), (SELECT id FROM vets WHERE name = 'Vet Stephanie Mendez'), '2019-9-29'),
+    ((SELECT id FROM animals WHERE name = 'Angemon'), (SELECT id FROM vets WHERE name = 'Vet Jack Harkness'), '2020-10-3'),
+    ((SELECT id FROM animals WHERE name = 'Angemon'), (SELECT id FROM vets WHERE name = 'Vet Jack Harkness'), '2020-11-4'),
+    ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2019-1-24'),
+    ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2019-5-15'),
+    ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2020-2-27'),
+    ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2020-8-3'),
+    ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Vet Stephanie Mendez'), '2020-5-24'),
+    ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Vet William Tatcher'), '2021-1-11');

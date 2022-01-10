@@ -8,7 +8,7 @@ CREATE TABLE animals (
     date_of_birth date,
     escape_attempts int,
     neutered boolean,
-    weight_kg decimal,
+    weight_kg decimal
 );
 
 ALTER TABLE animals
@@ -41,3 +41,27 @@ ALTER TABLE animals
     ADD CONSTRAINT species_id FOREIGN KEY(species_id) REFERENCES species(id);
 
 ALTER TABLE animals ADD owners_id int, ADD CONSTRAINT owners_id FOREIGN KEY(owners_id) REFERENCES owners(id);
+
+----
+
+CREATE TABLE vets (
+    id SERIAL PRIMARY KEY,
+    name varchar(100),
+    age int,
+    date_of_graduation date
+);
+
+CREATE TABLE specializations (
+    species_id int,
+    vets_id int,
+    CONSTRAINT fk_species FOREIGN KEY(species_id) REFERENCES species(id),
+    CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id)
+);
+
+CREATE TABLE visits (
+    animals_id int,
+    vets_id int,
+    date_of_visit date,
+    CONSTRAINT fk_animals FOREIGN KEY(animals_id) REFERENCES animals(id),
+    CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id)
+);
