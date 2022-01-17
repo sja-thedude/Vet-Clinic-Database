@@ -14,6 +14,12 @@ Vet Clinic is Module 4 project at Microverse. Vet Clinic is Relational database 
 - Twitter: [@twitterhandle](https://twitter.com/sja_thedude)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/sja)
 
+👤 **GORDON TINYEFUZA**
+
+- GitHub: [@githubhandle](https://github.com/1GORDON)
+- Twitter: [@twitterhandle](https://twitter.com/GTinyefuza)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
